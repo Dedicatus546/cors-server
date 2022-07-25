@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = new Koa();
 const router = new KoaRouter();
 
-router.post('/https\\://github.com/login/oauth/access_token', async (ctx, next) => {
+router.post('/github_access_token', async (ctx, next) => {
   const reqBody = ctx.request.body;
   const res = await axios.post('https://github.com/login/oauth/access_token', reqBody);
   const params = new URLSearchParams(res.data);
