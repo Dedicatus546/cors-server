@@ -18,6 +18,11 @@ router.post('/https\\://github.com/login/oauth/access_token', async (ctx, next) 
   await next();
 });
 
+router.get("/", async (ctx, next) => {
+  ctx.body = "a cors proxy server!";
+  await next();
+})
+
 app.use(KoaCors());
 app.use(KoaBodyParser());
 app.use(router.routes()).use(router.allowedMethods());
