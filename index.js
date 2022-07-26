@@ -18,8 +18,8 @@ router.post('/github_access_token', async (ctx, next) => {
   await next();
 });
 
-router.get("/", async (ctx, next) => {
-  ctx.body = "a cors proxy server!";
+router.get('/', async (ctx, next) => {
+  ctx.body = 'a cors proxy server!';
   await next();
 })
 
@@ -27,19 +27,6 @@ app.use(KoaCors());
 app.use(KoaBodyParser());
 app.use(router.routes()).use(router.allowedMethods());
 
-// app.use(async (ctx) => {
-//   const { ':method': method, ':path': path, body } = ctx.headers;
-//   console.log(ctx.headers);
-//   const url = path.substring(1);
-//   ctx.body = await fetch(url, {
-//     method,
-//     headers: {
-//       'content-type': ctx['content-type'],
-//     },
-//     body
-//   });
-// })
-
 app.listen(9999, () => {
   console.log('cors-server success!');
-})
+});
