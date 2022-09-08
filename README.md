@@ -12,6 +12,6 @@
 
 如果不放心，可以 `fork` 该项目然后自己注册 `vercel` 进行部署
 
-相关帖子：[解决 Gitalk 无法获取 Github Token 问题](https://prohibitorum.top/2022/07/26/%E8%A7%A3%E5%86%B3-Gitalk-%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96-Github-Token-%E9%97%AE%E9%A2%98/)
+相关帖子：[解决 Gitalk 无法获取 Github Token 问题](https://prohibitorum.top/7cc2c97a15b4.html)
 
 使用技术 `koa + koa router + koa cors + koa bodyparser + axios`
