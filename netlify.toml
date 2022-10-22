@@ -1,5 +1,6 @@
-[[redirects]]
-  from = "/github_access_token"
-  to = "https://github.com/login/oauth/access_token"
-  status = 200
-  force = true
+[build]
+edge_functions = "edge_functions"
+
+[[edge_functions]]
+path = "/github_access_token"
+function = "github_access_token"
