@@ -2,5 +2,9 @@
   directory = "netlify_functions"
 
 [[redirects]]
-  from = "/*"
-  to = "/*"
+  from = "/"
+  to = "/"
+
+[[redirects]]
+  from = "/github_access_token"
+  to = "/github_access_token"
