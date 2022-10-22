@@ -20,6 +20,9 @@ export default async function (request) {
       const res = await fetch("https://github.com/login/oauth/access_token", {
         method: "POST",
         body: reqBody,
+        headers: {
+          "Content-type": "application/json",
+        },
       });
       const text = await res.text();
       console.log("github api res: ", text);
