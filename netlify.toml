@@ -1,0 +1,6 @@
+[functions]
+  directory = "netlify_functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/*"
