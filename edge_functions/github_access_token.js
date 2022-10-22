@@ -10,7 +10,7 @@ module.exports = async function (request) {
     body: reqBody,
   });
   const params = new URLSearchParams(await res.text());
-  ctx.body = Array.from(params.entries()).reduce((obj, [key, value]) => {
+  return Array.from(params.entries()).reduce((obj, [key, value]) => {
     obj[key] = value;
     return obj;
   }, {});
