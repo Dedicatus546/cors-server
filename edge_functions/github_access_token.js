@@ -8,7 +8,7 @@ export default async function (request) {
     const resp = new Response();
     resp.headers.set("Access-Control-Allow-Origin", "*");
     resp.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-    return;
+    return resp;
   }
   if (request.method === "POST") {
     try {
