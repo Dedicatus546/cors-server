@@ -6,10 +6,13 @@
 export default async function (request) {
   if (request.method === "OPTIONS") {
     // 预检请求
-    const resp = new Response();
+    const resp = new Response(null, {
+      status: 204,
+    });
     resp.headers.set("Access-Control-Allow-Origin", "*");
     resp.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-    resp.headers.set("Allow", "POST");
+    resp.headers.set("Access-Control-Allow-Headers", "Content-Type");
+    resp.headers.set("Access-Control-Max-Age", `${86400 * 30}`);
     return resp;
   }
   if (request.method === "POST") {
@@ -32,11 +35,15 @@ export default async function (request) {
             obj[key] = value;
             return obj;
           }, {})
-        )
+        ),
+        {
+          status: 200,
+        }
       );
       resp.headers.set("Access-Control-Allow-Origin", "*");
       resp.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-      resp.headers.set("Allow", "POST");
+      resp.headers.set("Access-Control-Allow-Headers", "Content-Type");
+      resp.headers.set("Access-Control-Max-Age", `${86400 * 30}`);
       return resp;
     } catch (e) {
       console.error(e);
