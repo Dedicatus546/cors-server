@@ -10,7 +10,6 @@ export default async function (request) {
     resp.headers.set("Access-Control-Allow-Origin", "*");
     resp.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
     resp.headers.set("Allow", "POST");
-    resp.status = 204;
     return resp;
   }
   if (request.method === "POST") {
@@ -35,6 +34,9 @@ export default async function (request) {
           }, {})
         )
       );
+      resp.headers.set("Access-Control-Allow-Origin", "*");
+      resp.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+      resp.headers.set("Allow", "POST");
       return resp;
     } catch (e) {
       console.error(e);
