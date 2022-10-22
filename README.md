@@ -15,3 +15,12 @@
 相关帖子：[解决 Gitalk 无法获取 Github Token 问题](https://prohibitorum.top/7cc2c97a15b4.html)
 
 使用技术 `koa + koa router + koa cors + koa bodyparser + axios`
+
+## 2022-10-22
+
+目前已支持 `netlify` ，详情请进上面的相关帖子查看即可
+
+目前我个人部署有两个可用接口：
+
+- `vercel`: `https://vercel.prohibitorum.top/github_access_token` 
+- `netlify`: `https://strong-caramel-969805.netlify.app/github_access_token`
