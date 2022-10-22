@@ -12,10 +12,12 @@ export default async function (request) {
     });
     const params = new URLSearchParams(await res.text());
     return new Response(
-      Array.from(params.entries()).reduce((obj, [key, value]) => {
-        obj[key] = value;
-        return obj;
-      }, {})
+      JSON.stringify(
+        Array.from(params.entries()).reduce((obj, [key, value]) => {
+          obj[key] = value;
+          return obj;
+        }, {})
+      )
     );
   } catch (e) {
     console.error(e);
