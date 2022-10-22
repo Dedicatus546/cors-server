@@ -26,7 +26,7 @@ export default async function (request) {
           }, {})
         )
       );
-      resp.headers.set("");
+      return resp;
     } catch (e) {
       console.error(e);
       throw e;
