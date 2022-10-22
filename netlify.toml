@@ -1,10 +1,5 @@
-[functions]
-  directory = "netlify_functions"
-
-[[redirects]]
-  from = "/"
-  to = "/"
-
 [[redirects]]
   from = "/github_access_token"
-  to = "/github_access_token"
+  to = "https://github.com/login/oauth/access_token"
+  status = 200
+  force = true
