@@ -1,13 +1,24 @@
 {
   "name": "cors-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "a proxy server to proxy github access token api.",
   "main": "index.js",
   "scripts": {
     "serve": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Koa",
+    "Proxy Server",
+    "Cors",
+    "Github Access Token Api",
+    "Vercel",
+    "Netlify"
+  ],
+  "author": {
+    "name": "Par9uet",
+    "email": "1607611087@qq.com",
+    "url": "https://github.com/Dedicatus546"
+  },
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "github:koajs/cors",
