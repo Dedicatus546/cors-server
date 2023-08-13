@@ -1,17 +1,11 @@
-FROM node:18-alpine AS base
-RUN apk add --no-cache git
-RUN npm i -g pnpm
-
-FROM base as depends
-WORKDIR /app
-COPY ["package.json", "pnpm-lock.yaml", "./"]
-RUN pnpm install
-
-FROM base AS deploy
-WORKDIR /app
-COPY ["index.js", "./"]
-COPY --from=depends /app/node_modules ./node_modules
+FROM node:18-alpine
+WORKDIR /root/app
+COPY ["package.json", "pnpm-lock.yaml", ".npmrc", "index.js", "./"]
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+  && apk add --no-cache git \
+  && npm i -g pnpm \
+  && pnpm install
 
 EXPOSE 9999
 
-CMD ["node", "index.js"]
+CMD node index.js
