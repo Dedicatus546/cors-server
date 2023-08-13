@@ -4,7 +4,8 @@
   "description": "a proxy server to proxy github access token api.",
   "main": "index.js",
   "scripts": {
-    "serve": "node index.js"
+    "serve": "node index.js",
+    "bulid:docker-image": "node scripts/docker-image.build.js"
   },
   "keywords": [
     "Koa",
