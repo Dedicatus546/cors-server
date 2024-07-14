@@ -32,5 +32,5 @@
     "@types/koa": "^2.13.5",
     "@types/koa__router": "^8.0.11"
   },
-  "packageManager": "pnpm@8.9.0"
+  "packageManager": "pnpm@9.5.0"
 }
