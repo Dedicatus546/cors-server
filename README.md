@@ -8,7 +8,7 @@
 
 如果不想折腾，只需把配置下的 `proxy` 改为 `https://cors-server-ecru.vercel.app/github_access_token` 即可，如下。
 
-![](https://fastly.jsdelivr.net/gh/Dedicatus546/image@main/202207261450438.avif)
+![](https://fastly.jsdelivr.net/gh/Dedicatus546/image@main/2022/07/26/202207261450438.avif)
 
 如果不放心，可以 `fork` 该项目然后自己注册 `vercel` 进行部署。
 
